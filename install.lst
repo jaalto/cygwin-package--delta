@@ -1,0 +1,17 @@
+# Syntax: PATTERN [rm(1) option, like -rf]
+#
+# The file and directory PATTERN can use variables $PKG $VER $DOC. Examples:
+#
+#    $DOC/example -rf
+#    *.uml
+
+multidelta	usr/bin/
+delta		usr/bin/
+delta		usr/bin/singledelta
+topformflat	usr/bin/
+Readme		$DOC/
+www/*		$DOC/
+Test.mk			$DOC/demo/
+test0_delta/*		$DOC/demo/test0_delta/
+test1_multidelta/*	$DOC/demo/test1_multidelta/
+test2_multidelta/*	$DOC/demo/test2_multidelta/

@@ -1,0 +1,13 @@
+Index: delta/multidelta
+===================================================================
+--- delta.orig/multidelta	2009-05-27 17:05:04.000000000 +0100
++++ delta/multidelta	2009-05-27 17:24:37.000000000 +0100
+@@ -13,7 +13,7 @@
+ use strict 'subs';
+ use FindBin;
+ 
+-$delta          = "$FindBin::Bin/delta";
++$delta          = "$FindBin::Bin/singledelta";
+ $topformflat    = "$FindBin::Bin/topformflat";
+ $log            = "multidelta.log";
+ 

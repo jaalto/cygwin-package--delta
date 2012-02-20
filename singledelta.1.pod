@@ -1,0 +1,64 @@
+#  This is manual page in Perl POD format. Read more at
+#  http://perldoc.perl.org/perlpod.html or run command:
+#
+#     perldoc perlpod | less
+#
+#  To check the syntax:
+#
+#     podchecker *.pod
+#
+#  Create manual page with command:
+#
+#    pod2man PAGE.N.pod > PAGE.N
+
+=pod
+
+=head1 NAME
+
+singledelta - heuristic minimizer of interesting files
+
+=head1 SYNOPSIS
+
+  singledelta [options] FILE
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-help>
+
+Print short help and all options.
+
+=back
+
+=head1 DESCRIPTION
+
+Delta programs assist you in minimizing "interesting" files, subject
+to a test f their interestingness. A common such situation is when
+attempting o isolate a small failure-inducing substring of a large
+input that causes your program to demonstrate a bug.
+
+For documentation, see /usr/share/doc/delta/using_delta.html
+
+=head1 ENVIRONMENT
+
+None.
+
+=head1 FILES
+
+None.
+
+=head1 SEE ALSO
+
+delta(1)
+multidelta(1)
+singledelta(1)
+topformflat(1)
+
+=head1 AUTHORS
+
+This manual page was created by Jari Aalto <jari.aalto@cante.net>
+because the original package did not include one. Copyright (C) 2012
+Jari Aalto; Licensed under GPL v2 or later.
+
+=cut

@@ -1,0 +1,78 @@
+#  This is manual page in Perl POD format. Read more at
+#  http://perldoc.perl.org/perlpod.html or run command:
+#
+#     perldoc perlpod | less
+#
+#  To check the syntax:
+#
+#     podchecker *.pod
+#
+#  Create manual page with command:
+#
+#    pod2man PAGE.N.pod > PAGE.N
+
+=pod
+
+=head1 NAME
+
+topformflat - heuristic minimizer of interesting files
+
+=head1 SYNOPSIS
+
+  topformflat [options] [threshold] < input.c   > output.c
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-help>
+
+Print short help.
+
+=back
+
+=head1 DESCRIPTION
+
+Topformflat is a filter written by Scott McPeak that will print its
+input with the line granularity matching a specified nesting depth. It
+is useful for making the granularity of an input file start of very
+coarse for the first runs of delta and then gradually increasing it.
+Multidelta will run topformflat for you with a given nesting depth if
+you ask for it on the command line.
+
+The THRESHOLD (default: 0) specifies at what nesting level of braces
+will line breaks be allowed (or inserted). By starting with 0, you get
+all top-level forms, one per line (roughly). Increasing the threshold
+leads to finer-grained structure on each line. The intent is to use
+the delta minimizer on each level of granularity.
+
+For documentation, see /usr/share/doc/delta/using_delta.html
+
+Topformflat is part of the Delta programs assist you in minimizing
+"interesting" files, subject to a test f their interestingness. A
+common such situation is when attempting o isolate a small
+failure-inducing substring of a large input that causes your program
+to demonstrate a bug.
+
+=head1 ENVIRONMENT
+
+None.
+
+=head1 FILES
+
+None.
+
+=head1 SEE ALSO
+
+delta(1)
+multidelta(1)
+singledelta(1)
+topformflat(1)
+
+=head1 AUTHORS
+
+This manual page was created by Jari Aalto <jari.aalto@cante.net>
+because the original package did not include one. Copyright (C) 2012
+Jari Aalto; Licensed under GPL v2 or later.
+
+=cut
