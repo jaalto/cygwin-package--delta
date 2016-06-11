@@ -14,11 +14,9 @@ Install Perl dependencies with (included in Perl 5.15.4):
   force install FindBin
 
 Runtime requirements:
-  cygwin
   perl
 
 Build requirements:
-  cygwin
   quilt
 
 Canonical homepage:
